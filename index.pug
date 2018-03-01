@@ -1,0 +1,106 @@
+doctype html
+html
+  head
+    meta(charset="UTF-8")
+    title Falacias aquí y allá
+    link(rel="stylesheet", href="css/style.css")
+    link(rel="stylesheet", href="css/animate.css")
+  
+  body
+    section.o-wrapper
+      .o-slideshow
+        .o-wrapper-container.js-wrapper-container(data-hide-prev)
+          img(src="img/01-pareja.jpg" style="left: 20px; top: 50px;").u-pos.animated.fadeInLeft
+          .u-dialog.u-pos.u-dialog-left.animated.fadeInRight(style="right: 100px; top: 60px;"): .text Como soy la mejor estudiante de este salón, entonces pasaré el examen.
+          
+        .o-wrapper-container.js-wrapper-container(data-hide-next)
+          img(src="img/01-pareja.jpg" style="left: 20px; top: 50px;").u-pos.animated.fadeInLeft
+          
+          .u-evaluation.animated.slideInBottom
+            .u-title ¿Si S entonces E, y puesto que se da E, concluimos S?
+            .u-options
+              div(data-ok).answer Falacia de afirmación del consecuente
+              div.answer Falacia de negación del antecedente
+              div.answer Falacia de no pertinencia
+              div.answer Falacia de ambigüedad
+            .u-feedback.animated.fadeIn
+                .result.animated.zoomIn
+                  .error ×
+                  .ok ✓
+                .u-feedscroll
+                  p La falacia Afirmación del Consecuente o Error Inverso es una falacia que consiste en suponer que afirmando al antecedente estamos autorizados a afirmar el consecuente.
+                  p Su formulación es:
+                  p S → E
+                  p E
+                  p Por lo tanto: S
+                .u-btns
+                  .u-again: .btn Intenta de nuevo
+                  .u-remember
+                    .btn Recuerda
+                    .content.animated.slideInUp: .u-feedscroll “Recuerda que esta es una falacia formal, y da por hecho que en un condicional el consecuente es verdadero, y por lo tanto que el antecedente también lo es. Esto no es cierto, como viste en el caso de esta chica.”
+        
+        .o-wrapper-container.js-wrapper-container()
+          img(src="img/02-pareja.jpg" style="left: 20px; top: 50px;").u-pos.animated.fadeInLeft
+          .u-dialog.u-pos.u-dialog-left.animated.fadeInRight(style="left: 200px; top: 30px;"): .text Si mi novia pasa el examen es porque la ayudé a estudiar.
+          
+        .o-wrapper-container.js-wrapper-container
+          img(src="img/02-pareja.jpg" style="left: 20px; top: 50px;").u-pos
+          .u-dialog.u-pos.u-dialog-left.animated.zoomIn(style="left: 200px; top: 30px;"): .text Estamos hablando de otro examen de otra materia, ¿ok? Pero resulta que este otro examen, esta vez sí lo reprueba.
+
+        .o-wrapper-container.js-wrapper-container(data-hide-next style="display: block !important;")
+          img(src="img/02-pareja.jpg" style="left: 20px; top: 50px;").u-pos
+
+          
+          .u-evaluation.animated.slideInBottom
+            .u-title
+              | Completa la formulación lógica a partir de la premisa:
+              .u-premisa
+                span Si mi novia pasa el examen 
+                span es porque la ayudé a estudiar
+            .u-complete
+              .select: select
+                option(value="")
+                option(value="ok") N
+                option(value="") E
+              | → E
+              p ~N
+              | Por lo tanto: 
+              .select: select
+                option(value="")
+                option(value="") ~N
+                option(value="ok") ~E
+              .btn.u-check Verificar
+
+            //.u-options
+              div(data-ok).answer Falacia de afirmación del consecuente
+              div.answer Falacia de negación del antecedente
+              div.answer Falacia de no pertinencia
+              div.answer Falacia de ambigüedad
+              
+              
+              
+            .u-feedback.animated.fadeIn
+                .result.animated.zoomIn
+                  .error ×
+                  .ok ✓
+                .u-feedscroll
+                  p La anterior formulación corresponde a la falacia de Negación del antecedente.
+                  p Construyan en el grupo la definición de este tipo de falacia.
+                .u-btns
+                  .u-again: .btn Intenta de nuevo
+                  .u-remember
+                    .btn Recuerda
+                    .content.animated.slideInUp: .u-feedscroll “Recuerda que esta es una falacia formal, y da por hecho que en un condicional al negar el antecedente, concluyes la negación del consecuente. Esto es incorrecto, como viste en el caso de este chico.”
+          
+          
+        .o-wrapper-container.js-wrapper-container
+          img(src="img/ss-02.jpg")
+        .o-wrapper-container.js-wrapper-container
+          img(src="img/ss-03.jpg")
+      
+      .o-navbar-btn
+        button(title="Anterior").u-nav-btn.js-prev-btn.u-transition ‹
+        button(title="Siguiente").u-nav-btn.js-next-btn.u-transition ›
+        
+    script(type="text/javascript" src="js/jquery-3.3.1.min.js")
+    script(type="text/javascript" src="js/functions.js")
