@@ -25,7 +25,7 @@
 
 .o-wrapper{
 	font-family: museo;
-	background-color: gray;
+
 	position: relative;
 	width: 800px;
 	height: 500px;
@@ -43,41 +43,36 @@
   display: inline-block;
   vertical-align: middle;
   overflow: hidden;
+  background-image: url(../img/fondo.png);
+  background-size: 100%;
 }
 
 
 
 .o-navbar-btn{
-	background-color: rgba(0,0,0,.15);
 	position: absolute;
 	z-index: 10;
 	width: 100%;
 	bottom: 0;
+  text-align: center;
+  border-bottom: 12px solid #667BBB;
 }
 
-.o-navbar-btn button:last-child{
-	float: right;
-}
 
 /*---------Utilities---------*/
 
 .u-nav-btn{
-	background-color: black;
-	height: 50px;
-	width: 50px;
-	padding: 0px 6px 6px 6px;
+  background: transparent;
+  display: inline-block;
+	height: 36px;
+	width: 36px;
+  margin: 10px;
 	text-align: center;
-	margin: 12px;
-	color: white;
-	border-radius: 100%;
-	font-size: 30px;
-	font-weight: lighter;
 	cursor: pointer;
 }
 
 .u-nav-btn:focus{ outline: none; }
-.u-nav-btn:first-child:hover{ padding: 0px 6px 6px 0px; }
-.u-nav-btn:last-child:hover{ padding: 0px 0px 6px 6px; }
+
 
 .u-img-select:focus{
 	outline: none;
@@ -155,26 +150,38 @@
 
 
 .u-evaluation{
-  width: 40%;
+  width: 360px; height: 440px;
   position: absolute;
-  right: 20px;
-  top: 50px;
+  right: 10px;
+  top: 20px;
   bottom: 50px;
-  background: #fff;
+  background-image: url(../img/fondo-hoja.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 0 10px 10px 0;
+  overflow-y: auto;
 }
 .u-evaluation .u-title{
-  margin-top: 20px; text-align: center;
+  margin-top: 40px; text-align: center;
   font-weight: bold;
-  font-size: 1.4em;
-  padding: 10px;
+  font-size: 0.9em;
+  padding: 30px 20px 10px 20px;
+  text-transform: uppercase;
 }
-.u-evaluation .u-title:after{
-  content:""; display: block; width: 50%; margin: 10px auto;
-  border-bottom: 2px solid #000;
-}
+
 .u-evaluation .u-options div{
-  padding: 10px;
-  border-bottom: 1px solid #eee;
+  padding: 5px;
+  background: #F7F6F5;
+  border: 2px solid #F2EFEC;
+  border-radius: 3px;
+  font-size: 0.8em;
+  margin: 10px 20px;
+}
+.u-evaluation .u-options div span{
+  display: inline-block;
+  padding: 5px 10px;
+  border: 2px solid #F2EFEC;
+  font-size: 0.9em;
 }
 
 .u-evaluation .u-options .answer{
@@ -185,21 +192,18 @@
   cursor: pointer;
 }
 .u-evaluation .u-options .answer:hover{
-  transform: scale(1.05, 1.05);
-  border: 2px solid #000;
-  background: #fff;
-  border-color: #666;
   -moz-transition:all ease-in-out .15s;
 	-webkit-transition:all ease-in-out .15s;
 	-o-transition:all ease-in-out .15s;
 	transition:all ease-in-out .15s;
   cursor: pointer;
+  border-color: #D7C4A3;
+  background: #F6F2E9;
 }
 
 .u-evaluation .u-options .u-clicked{
-  transform: scale(1.05, 1.05);
-  background: #000;
-  color:#fff;
+  border-color: #D7C4A3;
+  background: #F6F2E9;
 }
 
 .u-feedback{
@@ -208,24 +212,14 @@
   z-index: 2;
   background: #000;
   position: absolute;
-  top: 0%; left: -2%; bottom: 70px; right: -2%;
+  left: -100px;
+  bottom: 60px; right: 10px;
   z-index: 2;
   background: #fff;
-	border-radius: 3px;
-	border: 2px solid #000;
-  box-shadow: 0 0 20px #888;
-  padding: 20px;
-}
-.u-feedback .result{
-	background: #000;
-	color:#fff;
-	width: 60px; height: 60px;
-	line-height: 1.5;
-	border-radius: 50%;
-	margin: -50px auto 0 auto;
-	font-size: 2.5em !important;
-	text-align: center;
-	border: 2px solid #fff;
+	border-left: 2px solid #8DCFA4;
+  border-right: 2px solid #8DCFA4;
+  padding: 5px 20px;
+  font-size: 0.8em;
 }
 .u-feedback .u-feedscroll{
   overflow-y: auto;
@@ -240,45 +234,65 @@
 
 
 .btn{
-  background: #fff;
-	border: 2px solid #000;
-  text-align: center;
-	padding: 4px 0px;
   	cursor: pointer;
 }
-.btn:hover{
-  background: #000; color:#fff;
-}
+
 
 .u-btns{
 	font-size: 0.8em;
 }
-.u-btns .u-again{
-	width: 48%;
-	float: left;
-}
+
 .u-btns .u-remember{
-	width: 48%;
-	float:right;
+  position: absolute;
+  right: 8px; bottom: 6px;
+}
+
+
+.modal{
+  display: none;
+  position: absolute;
+  left: 10%; top: 10%; right: 10%; bottom: 80px;
+  background: rgba(237, 222, 194, 0.95);
+  z-index: 9;
+  padding: 80px;
+  font-size: 1.4em;
+  text-align: center;
+}
+.modal:after, .modal:before{
+  content:""; display: block; width: 56px; height: 56px;
+  background-image: url(../img/comillas.png);
+  position: absolute;
+  z-index: -1;
+}
+.modal:before{ left: 10%; top: 20%; }
+.modal:after{background-position: right; right: 10%; bottom: 20%; }
+.modal p {
+  padding: 20px;
+}
+.modal .close{
+  position: absolute;
+  top: -10px; right: -10px;
+  width: 30px; height: 30px;
+  background:#8DCFA4;
+  color:#fff;
+  border-radius: 50%;
+  line-height: 1.4;
+  font-size: 20px;
+}
+.modal .close:hover{
+  background: #fff; color:#8DCFA4;
+  cursor: pointer;
 }
 
 
 
-
-.u-remember .btn, .u-again .btn{
-  position: relative;
-}
-
-.u-remember .btn:not(.active){
+.btn-pulse{
 	animation-name: pulse;
-  animation-duration: 2s;
+  animation-duration: 4s;
   animation-iteration-count: infinite;
+  cursor: pointer;
 }
 
-
-.u-remember .btn:hover, .u-remember .btn.active{
-	background: #000; color:#fff;
-}
 .u-remember .btn.active:after{
   content: '';
 	position: absolute;
@@ -306,25 +320,44 @@
 
 
 .u-premisa{
-  margin: 10px;
+  margin: 40px 0 0 0;
   padding: 5px;
   border-radius: 3px;
   text-align: center;
-  font-size: 0.8em;
-  background: #eee;
-  color:#666;
-}
-.u-premisa span{display: block;}
+  font-size: 0.9em;
+  color:#000;
 
-.u-premisa span:after{font-size: 0.8em; color:#aaa;}
-.u-premisa span:first-child:after{
-  content: "N"; display: block;
-  border-top: 1px solid #aaa;
 }
-.u-premisa span:first-child+span:after{
-  content: "E"; display: block;
-  border-top: 1px solid #aaa;
+.u-premisa div{
+  margin: 10px 0;
+  text-align: left;
 }
+.u-premisa div span:first-child{
+  display: inline-block;
+  border-bottom: 2px solid #667BBB;
+  text-transform: none;
+  padding: 4px 8px;
+  position: relative;
+}
+.u-premisa div span:first-child:before, .u-premisa div span:first-child:after{
+  content:""; display: block; width: 2px; height: 13px;
+  background: #667BBB;
+  display: inline-block;
+  position: absolute; bottom: 0; left: 0;
+}
+.u-premisa div span:first-child:after{ left: auto; right: 0;}
+
+.u-premisa div span:last-child{
+  display: inline-block;
+  font-size: 1.2em;
+}
+.u-premisa div span:last-child:before{
+  content:""; width: 60px; height: 2px;
+  background: #667BBB;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
 
 .u-complete{
 	text-align: center;
@@ -332,36 +365,54 @@
 	font-size: 1.2em;
 }
 .u-complete .select{
-	width: 40px;
+  width: 40px;
 	overflow: hidden;
 	display: inline-block;
 	background: #EEE;
-	border-bottom: 2px solid #000;
-	padding: 0 !important;
 	line-height: 0;
 	margin-bottom: -6px;
-	border-radius: 3px;
+  padding: 5px;
+  background: #F6F2E9;
+  border: 2px solid #D7C4A3;
+  border-radius: 3px;
+  font-size: 0.8em;
 }
 
 .u-complete select{
 	background: #fff;
 	border-radius: 0;
 	background: transparent;
-	width: 200px;
-	font-family: Museo;
+	width: 150px;
 	font-size: 1em;
 	cursor: pointer;
+  font-family: Museo;
+}
+.u-complete select:focus{
+  outline: none;
+
 }
 
 .u-complete .btn{
+  display: block;
+  width: 80px;
   font-size: 0.9em;
-  width: 50%;
   margin: 5px auto;
-  padding: 0;
+  padding: 2px 8px;
+  background: #8DCFA4;
+
 }
 
+.tac{text-align: center;}
+.u-note{
+	margin: 60px 20px;
+	color:#aaa;
+  font-size: 0.9em;
+}
+.btn-next-inline{
+  text-align: center;
+}
 
 /*---------Only Js classes---------*/
 
 .js-wrapper-container{ position: absolute; display: none; }
-.js-wrapper-container:first-child { display: block; }
+//.js-wrapper-container:first-child { display: block; }

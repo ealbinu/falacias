@@ -9,7 +9,11 @@ html
   body
     section.o-wrapper
       .o-slideshow
-        .o-wrapper-container.js-wrapper-container(data-hide-prev)
+        | <!-- ejercicio 1 -->
+        .o-wrapper-container.js-wrapper-container(data-hide-prev, data-hide-next)
+          img(src="img/intro.png" style="left: 0; bottom:-50px; width: 100%; ").u-pos
+          img.js-next-btn.u-pos.animated.btn-pulse(src="img/btn_comenzar.png" style="left:50%; bottom: 80px; margin-left: -120px;")
+        .o-wrapper-container.js-wrapper-container
           img(src="img/01-pareja.jpg" style="left: 20px; top: 50px;").u-pos.animated.fadeInLeft
           .u-dialog.u-pos.u-dialog-left.animated.fadeInRight(style="right: 100px; top: 60px;"): .text Como soy la mejor estudiante de este salón, entonces pasaré el examen.
           
@@ -19,14 +23,11 @@ html
           .u-evaluation.animated.slideInBottom
             .u-title ¿Si S entonces E, y puesto que se da E, concluimos S?
             .u-options
-              div(data-ok).answer Falacia de afirmación del consecuente
-              div.answer Falacia de negación del antecedente
-              div.answer Falacia de no pertinencia
-              div.answer Falacia de ambigüedad
+              div(data-ok).answer #[span a] Falacia de afirmación del consecuente
+              div.answer #[span b] Falacia de negación del antecedente
+              div.answer #[span c] Falacia de no pertinencia
+              div.answer #[span d] Falacia de ambigüedad
             .u-feedback.animated.fadeIn
-                .result.animated.zoomIn
-                  .error ×
-                  .ok ✓
                 .u-feedscroll
                   p La falacia Afirmación del Consecuente o Error Inverso es una falacia que consiste en suponer que afirmando al antecedente estamos autorizados a afirmar el consecuente.
                   p Su formulación es:
@@ -34,39 +35,46 @@ html
                   p E
                   p Por lo tanto: S
                 .u-btns
-                  .u-again: .btn Intenta de nuevo
                   .u-remember
-                    .btn Recuerda
-                    .content.animated.slideInUp: .u-feedscroll “Recuerda que esta es una falacia formal, y da por hecho que en un condicional el consecuente es verdadero, y por lo tanto que el antecedente también lo es. Esto no es cierto, como viste en el caso de esta chica.”
+                    .btn.btn-pulse(data-modal="#recuerda-1"): img(src="img/btn_recuerda.png")
         
+          .modal#recuerda-1
+            p Recuerda que esta es una falacia formal, y da por hecho que en un condicional el consecuente es verdadero, y por lo tanto que el antecedente también lo es.
+            p Esto no es cierto, como viste en el caso de esta chica.
+            .close x
+        
+        | <!-- ejercicio 2 -->
         .o-wrapper-container.js-wrapper-container()
-          img(src="img/02-pareja.jpg" style="left: 20px; top: 50px;").u-pos.animated.fadeInLeft
+          img(src="img/01-pareja.jpg" style="left: 20px; top: 50px;").u-pos.animated.fadeInLeft
           .u-dialog.u-pos.u-dialog-left.animated.fadeInRight(style="left: 200px; top: 30px;"): .text Si mi novia pasa el examen es porque la ayudé a estudiar.
           
         .o-wrapper-container.js-wrapper-container
-          img(src="img/02-pareja.jpg" style="left: 20px; top: 50px;").u-pos
+          img(src="img/01-pareja.jpg" style="left: 20px; top: 50px;").u-pos
           .u-dialog.u-pos.u-dialog-left.animated.zoomIn(style="left: 200px; top: 30px;"): .text Estamos hablando de otro examen de otra materia, ¿ok? Pero resulta que este otro examen, esta vez sí lo reprueba.
 
         .o-wrapper-container.js-wrapper-container(data-hide-next)
-          img(src="img/02-pareja.jpg" style="left: 20px; top: 50px;").u-pos
+          img(src="img/01-pareja.jpg" style="left: 20px; top: 50px;").u-pos
 
-          
           .u-evaluation.animated.slideInBottom
             .u-title
               | Completa la formulación lógica a partir de la premisa:
               .u-premisa
-                span Si mi novia pasa el examen 
-                span es porque la ayudé a estudiar
+                div
+                  span Si mi novia pasa el examen
+                  span N
+                div
+                  span es porque la ayudé a estudiar
+                  span E
             .u-complete
               .select: select
-                option(value="")
+                option(value="") ?
                 option(value="ok") N
                 option(value="") E
               | → E
               p ~N
               | Por lo tanto: 
               .select: select
-                option(value="")
+                option(value="") ?
                 option(value="") ~N
                 option(value="ok") ~E
               .btn.u-check Verificar
@@ -76,31 +84,112 @@ html
               div.answer Falacia de negación del antecedente
               div.answer Falacia de no pertinencia
               div.answer Falacia de ambigüedad
-              
-              
-              
+
             .u-feedback.animated.fadeIn
-                .result.animated.zoomIn
-                  .error ×
-                  .ok ✓
+
                 .u-feedscroll
                   p La anterior formulación corresponde a la falacia de Negación del antecedente.
-                  p Construyan en el grupo la definición de este tipo de falacia.
+                  p Construyan en el grupo <br>la definición de este tipo de falacia.
                 .u-btns
-                  .u-again: .btn Intenta de nuevo
                   .u-remember
-                    .btn Recuerda
-                    .content.animated.slideInUp: .u-feedscroll “Recuerda que esta es una falacia formal, y da por hecho que en un condicional al negar el antecedente, concluyes la negación del consecuente. Esto es incorrecto, como viste en el caso de este chico.”
+                    .btn.btn-pulse(data-modal="#recuerda-2"): img(src="img/btn_recuerda.png")
           
-          
-        .o-wrapper-container.js-wrapper-container
-          img(src="img/ss-02.jpg")
-        .o-wrapper-container.js-wrapper-container
-          img(src="img/ss-03.jpg")
+          .modal#recuerda-2
+            p Recuerda que esta es una falacia formal, y da por hecho que en un condicional al negar el antecedente, concluyes la negación del consecuente.
+            p Esto es incorrecto, como viste en el caso de este chico.
+            .close x      
       
+      
+        | <!-- ejercicio 3 -->
+        .o-wrapper-container.js-wrapper-container
+          img(src="img/03-papa.jpg" style="right: 20px; top: 50px;").u-pos.animated.fadeInRight
+          
+        .o-wrapper-container.js-wrapper-container
+          img(src="img/03-papa.jpg" style="right: 20px; top: 50px;").u-pos
+          .u-dialog.u-pos.u-dialog-right.animated.fadeInRight(style="right: 400px; top: 60px;"): .text Mi hija ha tenido muchos problemas últimamente, su madre y yo estamos en una situación difícil, nos estamos divorciando y ella lo está resintiendo; acaba de mudarse con su madre y el cambio apenas los está superando; yo la veo muy poco, y ella me ama muchísimo, ¿se imagina usted ese cambio para ella? Por favor, entiéndala un poco, está pasando por procesos que son muy complicados para ella.
+        
+        .o-wrapper-container.js-wrapper-container(data-hide-next)
+          img(src="img/03-papa.jpg" style="left: 20px; top: 50px;").u-pos.animated.fadeInRight
+            
+          .u-evaluation.animated.slideInBottom
+            .u-title.animated.fadeIn ¿Qué piensan que debe hacer el profesor?
+            .u-note Al terminar la reflexión pasar a la pregunta 2
+            .btn-next-inline: img(src="img/btn_siguiente.png").btn.js-next-btn
+        
+        .o-wrapper-container.js-wrapper-container(data-hide-next)
+          img(src="img/03-papa.jpg" style="left: 20px; top: 50px;").u-pos
+            
+          .u-evaluation.animated.slideInBottom
+            .u-title.animated.fadeIn Quienes piensan que el profesor debe darle otra oportunidad a la chica, ¿escucharon realmente algún argumento por parte del padre?
+            .u-note Al terminar la reflexión pasar a la pregunta 3
+            .btn-next-inline: img(src="img/btn_siguiente.png").btn.js-next-btn
+        
+        .o-wrapper-container.js-wrapper-container
+          img(src="img/03-papa.jpg" style="left: 20px; top: 50px;").u-pos
+          .u-evaluation.animated.slideInBottom
+            .u-title.animated.fadeIn Estamos ante una falacia de no pertinencia, ya que los sentimientos que se pretenden provocar en el interlocutor no son pertinentes para el debate, solo se pretende desconcentrarlo y alterarlo emocionalmente.
+            .u-remember.tac
+              .btn.btn-pulse(data-modal="#recuerda-3"): img(src="img/btn_recuerda.png")
+
+          .modal#recuerda-3
+            p Recuerda que esta es una falacia informal. Puede ser que esté argumentada de forma válida, pero no apela a los argumentos esgrimidos por el interlocutor, sino a causar temor, compasión, etc., con la finalidad de apelar a los sentimientos del otro, como fue el caso de este padre con el profesor.
+            .close x
+        
+        | <!-- ejercicio 4 -->
+        .o-wrapper-container.js-wrapper-container(style="display:block;")
+          img(src="img/04-madre.jpg" style="right: 20px; top: 50px;").u-pos.animated.fadeInRight
+          
+        .o-wrapper-container.js-wrapper-container
+          img(src="img/04-madre.jpg" style="right: 20px; top: 50px;").u-pos
+          .u-dialog.u-pos.u-dialog-right.animated.fadeInRight(style="right: 400px; top: 60px;"): .text sabe, en estos momentos me encuentro muy bien en mi trabajo, económicamente muy estable, no tendría ningún problema en desprenderme de cierta cantidad de dinero…
+        
+        .o-wrapper-container.js-wrapper-container(data-hide-next)
+          img(src="img/04-madre.jpg" style="left: 20px; top: 50px;").u-pos.animated.fadeInRight
+            
+          .u-evaluation.animated.slideInBottom
+            .u-title.animated.fadeIn ¿Creen que el profesor reconsiderará hacer nuevamente el examen a su alumna?
+            .u-note Al terminar la reflexión pasar a la pregunta 2
+            .btn-next-inline: img(src="img/btn_siguiente.png").btn.js-next-btn
+        
+        .o-wrapper-container.js-wrapper-container(data-hide-next)
+          img(src="img/04-madre.jpg" style="left: 20px; top: 50px;").u-pos
+            
+          .u-evaluation.animated.slideInBottom
+            .u-title.animated.fadeIn ¿Qué puede entender el profesor sobre la declaración de la madre?
+            .u-note Al terminar la reflexión pasar a la pregunta 3
+            .btn-next-inline: img(src="img/btn_siguiente.png").btn.js-next-btn
+        
+        .o-wrapper-container.js-wrapper-container(data-hide-next)
+          img(src="img/04-madre.jpg" style="left: 20px; top: 50px;").u-pos
+            
+          .u-evaluation.animated.slideInBottom
+            .u-title.animated.fadeIn ¿Podemos decir que realmente el profesor está siendo sobornado?
+            .u-note Al terminar la reflexión pasar a la pregunta 4
+            .btn-next-inline: img(src="img/btn_siguiente.png").btn.js-next-btn
+        
+        .o-wrapper-container.js-wrapper-container(data-hide-next)
+          img(src="img/04-madre.jpg" style="left: 20px; top: 50px;").u-pos
+            
+          .u-evaluation.animated.slideInBottom
+            .u-title.animated.fadeIn Si el profesor reconsidera hacer nuevamente el examen está cayendo en la falacia de ambigüedad
+            .u-note Continua a la conclusión
+            .btn-next-inline: img(src="img/btn_siguiente.png").btn.js-next-btn
+            
+        .o-wrapper-container.js-wrapper-container
+          img(src="img/04-madre.jpg" style="left: 20px; top: 50px;").u-pos
+          .u-evaluation.animated.slideInBottom
+            .u-title.animated.fadeIn Conclusión
+            .u-note Si el profesor reconsidera hacer nuevamente el examen, está cayendo en la falacia; si no lo hace, podemos decir que tiene un poco de racionalidad en él, porque recordemos que ya cedió ante el padre de la chica. Pero, el punto de este asunto es el modo en que la madre le dijo al profesor “no tendría ningún problema en desprenderme de cierta cantidad de dinero”. Lo dijo de forma ambigua, sin comprometerse a realmente nada, es decir, no está explícitamente sobornando al profesor. Si su intención fuera realmente sobornar, diría: le doy dinero a cambio de que vuelva a aplicar el examen a mi hija. Pero no lo hizo así, esto es porque así funciona este tipo de falacia, expresar algo de manera ambigua para que nuestro interlocutor se confunda y crea algo que nos conviene, para después desprendernos de la responsabilidad apelando a que realmente uno nunca quiso decir lo que el otro entendió. En este caso, suponiendo que el profesor acepte hacer el examen de nuevo, y después exija a la madre de su alumna el dinero acordado, la madre puede negárselo, alegando que jamás quiso dar a entender que ella estaba ofreciéndole dinero a cambio de volver a aplicar el examen a su hija. Y así, la falacia por ambigüedad dio resultado.
+            .u-remember.tac
+              .btn.btn-pulse(data-modal="#recuerda-4"): img(src="img/btn_recuerda.png")
+
+          .modal#recuerda-4
+            p Recuerda que esta es una falacia informal, y utiliza las posibles acepciones que se pueden desprender de enunciar alguna idea de forma ambigua, es decir, de una forma no explícitamente clara. Esta madre, en este caso, pudo beneficiarse de su ambigüedad sin tener argumentos claros.
+            .close x
+        
       .o-navbar-btn
-        button(title="Anterior").u-nav-btn.js-prev-btn.u-transition ‹
-        button(title="Siguiente").u-nav-btn.js-next-btn.u-transition ›
+        button(title="Anterior").u-nav-btn.js-prev-btn.u-transition: img(src="img/btn_prev.png")
+        button(title="Siguiente").u-nav-btn.js-next-btn.u-transition: img(src="img/btn_next.png")
         
     script(type="text/javascript" src="js/jquery-3.3.1.min.js")
     script(type="text/javascript" src="js/functions.js")

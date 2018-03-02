@@ -46,13 +46,15 @@ $ (document).ready(function() {
     var _this = $(this);
     _this.addClass('u-clicked').removeClass('answer');
     if(_this.is('[data-ok]')){
-      _this.parent().next('.u-feedback').find('.ok').show();
       currentSlider.removeAttr('data-hide-next');
-      $('.u-again .btn').hide();
+      _this.parent().next('.u-feedback').show();
     } else {
+      _this.addClass('animated shake');
+      setTimeout(function(){ _this.removeClass('u-clicked animated shake')},1000);
+      _this.addClass('answer');
       _this.parent().next('.u-feedback').find('.error').show();
     }
-    _this.parent().next('.u-feedback').show();
+
 
     slideActions(currentSlider);
   });
@@ -74,19 +76,30 @@ $ (document).ready(function() {
       }
     });
     if(okay){
-      _this.parent().next('.u-feedback').find('.ok').show();
       currentSlider.removeAttr('data-hide-next');
-      $('.u-again .btn').hide();
+      _this.parent().next('.u-feedback').show();
     } else {
-        _this.parent().next('.u-feedback').find('.error').show();
+      $('.select').addClass('animated shake');
+
+      _this.addClass('animated shake');
+      setTimeout(function(){
+        _this.removeClass('animated shake');
+        $('.select').removeClass('animated shake');
+        $('.select select').val('');
+      },1000);
     }
-    _this.parent().next('.u-feedback').show();
+
 
     slideActions(currentSlider);
   });
 
+  $('[data-modal]').click(function(){
+    $($(this).attr('data-modal')).toggle();
+  });
 
-
+  $('.modal .close').click(function(){
+    $(this).closest('.modal').hide();
+  });
 
   $('.u-remember .btn').click(function(){
     $(this).next('.content').toggle();

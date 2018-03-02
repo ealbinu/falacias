@@ -8,8 +8,9 @@
   </head>
   <body>
     <section class="o-wrapper">
-      <div class="o-slideshow">
-        <div class="o-wrapper-container js-wrapper-container" data-hide-prev><img class="u-pos animated fadeInLeft" src="img/01-pareja.jpg" style="left: 20px; top: 50px;">
+      <div class="o-slideshow"><!-- ejercicio 1 -->
+        <div class="o-wrapper-container js-wrapper-container" data-hide-prev data-hide-next><img class="u-pos" src="img/intro.png" style="left: 0; bottom:-50px; width: 100%; ;"><img class="js-next-btn u-pos animated btn-pulse" src="img/btn_comenzar.png" style="left:50%; bottom: 80px; margin-left: -120px;"></div>
+        <div class="o-wrapper-container js-wrapper-container"><img class="u-pos animated fadeInLeft" src="img/01-pareja.jpg" style="left: 20px; top: 50px;">
           <div class="u-dialog u-pos u-dialog-left animated fadeInRight" style="right: 100px; top: 60px;">
             <div class="text">Como soy la mejor estudiante de este salón, entonces pasaré el examen.</div>
           </div>
@@ -18,16 +19,12 @@
           <div class="u-evaluation animated slideInBottom">
             <div class="u-title">¿Si S entonces E, y puesto que se da E, concluimos S?</div>
             <div class="u-options">
-              <div class="answer" data-ok>Falacia de afirmación del consecuente</div>
-              <div class="answer">Falacia de negación del antecedente</div>
-              <div class="answer">Falacia de no pertinencia</div>
-              <div class="answer">Falacia de ambigüedad</div>
+              <div class="answer" data-ok><span>a</span> Falacia de afirmación del consecuente</div>
+              <div class="answer"><span>b</span> Falacia de negación del antecedente</div>
+              <div class="answer"><span>c</span> Falacia de no pertinencia</div>
+              <div class="answer"><span>d</span> Falacia de ambigüedad</div>
             </div>
             <div class="u-feedback animated fadeIn">
-              <div class="result animated zoomIn">
-                <div class="error">×</div>
-                <div class="ok">✓</div>
-              </div>
               <div class="u-feedscroll">
                 <p>La falacia Afirmación del Consecuente o Error Inverso es una falacia que consiste en suponer que afirmando al antecedente estamos autorizados a afirmar el consecuente.</p>
                 <p>Su formulación es:</p>
@@ -36,38 +33,40 @@
                 <p>Por lo tanto: S</p>
               </div>
               <div class="u-btns">
-                <div class="u-again">
-                  <div class="btn">Intenta de nuevo</div>
-                </div>
                 <div class="u-remember">
-                  <div class="btn">Recuerda</div>
-                  <div class="content animated slideInUp">
-                    <div class="u-feedscroll">“Recuerda que esta es una falacia formal, y da por hecho que en un condicional el consecuente es verdadero, y por lo tanto que el antecedente también lo es. Esto no es cierto, como viste en el caso de esta chica.”</div>
-                  </div>
+                  <div class="btn btn-pulse" data-modal="#recuerda-1"><img src="img/btn_recuerda.png"></div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="o-wrapper-container js-wrapper-container"><img class="u-pos animated fadeInLeft" src="img/02-pareja.jpg" style="left: 20px; top: 50px;">
+          <div class="modal" id="recuerda-1">
+            <p>Recuerda que esta es una falacia formal, y da por hecho que en un condicional el consecuente es verdadero, y por lo tanto que el antecedente también lo es.</p>
+            <p>Esto no es cierto, como viste en el caso de esta chica.</p>
+            <div class="close">x</div>
+          </div>
+        </div><!-- ejercicio 2 -->
+        <div class="o-wrapper-container js-wrapper-container"><img class="u-pos animated fadeInLeft" src="img/01-pareja.jpg" style="left: 20px; top: 50px;">
           <div class="u-dialog u-pos u-dialog-left animated fadeInRight" style="left: 200px; top: 30px;">
             <div class="text">Si mi novia pasa el examen es porque la ayudé a estudiar.</div>
           </div>
         </div>
-        <div class="o-wrapper-container js-wrapper-container"><img class="u-pos" src="img/02-pareja.jpg" style="left: 20px; top: 50px;">
+        <div class="o-wrapper-container js-wrapper-container"><img class="u-pos" src="img/01-pareja.jpg" style="left: 20px; top: 50px;">
           <div class="u-dialog u-pos u-dialog-left animated zoomIn" style="left: 200px; top: 30px;">
             <div class="text">Estamos hablando de otro examen de otra materia, ¿ok? Pero resulta que este otro examen, esta vez sí lo reprueba.</div>
           </div>
         </div>
-        <div class="o-wrapper-container js-wrapper-container" data-hide-next><img class="u-pos" src="img/02-pareja.jpg" style="left: 20px; top: 50px;">
+        <div class="o-wrapper-container js-wrapper-container" data-hide-next><img class="u-pos" src="img/01-pareja.jpg" style="left: 20px; top: 50px;">
           <div class="u-evaluation animated slideInBottom">
             <div class="u-title">Completa la formulación lógica a partir de la premisa:
-              <div class="u-premisa"><span>Si mi novia pasa el examen </span><span>es porque la ayudé a estudiar</span></div>
+              <div class="u-premisa">
+                <div><span>Si mi novia pasa el examen</span><span>N</span></div>
+                <div><span>es porque la ayudé a estudiar</span><span>E</span></div>
+              </div>
             </div>
             <div class="u-complete">
               <div class="select">
                 <select>
-                  <option value=""></option>
+                  <option value="">?</option>
                   <option value="ok">N</option>
                   <option value="">E</option>
                 </select>
@@ -75,7 +74,7 @@
               <p>~N</p>Por lo tanto: 
               <div class="select">
                 <select>
-                  <option value=""></option>
+                  <option value="">?</option>
                   <option value="">~N</option>
                   <option value="ok">~E</option>
                 </select>
@@ -88,38 +87,108 @@
             div.answer Falacia de no pertinencia
             div.answer Falacia de ambigüedad
             
-            
-            
             -->
             <div class="u-feedback animated fadeIn">
-              <div class="result animated zoomIn">
-                <div class="error">×</div>
-                <div class="ok">✓</div>
-              </div>
               <div class="u-feedscroll">
                 <p>La anterior formulación corresponde a la falacia de Negación del antecedente.</p>
-                <p>Construyan en el grupo la definición de este tipo de falacia.</p>
+                <p>Construyan en el grupo <br>la definición de este tipo de falacia.</p>
               </div>
               <div class="u-btns">
-                <div class="u-again">
-                  <div class="btn">Intenta de nuevo</div>
-                </div>
                 <div class="u-remember">
-                  <div class="btn">Recuerda</div>
-                  <div class="content animated slideInUp">
-                    <div class="u-feedscroll">“Recuerda que esta es una falacia formal, y da por hecho que en un condicional al negar el antecedente, concluyes la negación del consecuente. Esto es incorrecto, como viste en el caso de este chico.”</div>
-                  </div>
+                  <div class="btn btn-pulse" data-modal="#recuerda-2"><img src="img/btn_recuerda.png"></div>
                 </div>
               </div>
             </div>
           </div>
+          <div class="modal" id="recuerda-2">
+            <p>Recuerda que esta es una falacia formal, y da por hecho que en un condicional al negar el antecedente, concluyes la negación del consecuente.</p>
+            <p>Esto es incorrecto, como viste en el caso de este chico.</p>
+            <div class="close">x      </div>
+          </div>
+        </div><!-- ejercicio 3 -->
+        <div class="o-wrapper-container js-wrapper-container"><img class="u-pos animated fadeInRight" src="img/03-papa.jpg" style="right: 20px; top: 50px;"></div>
+        <div class="o-wrapper-container js-wrapper-container"><img class="u-pos" src="img/03-papa.jpg" style="right: 20px; top: 50px;">
+          <div class="u-dialog u-pos u-dialog-right animated fadeInRight" style="right: 400px; top: 60px;">
+            <div class="text">Mi hija ha tenido muchos problemas últimamente, su madre y yo estamos en una situación difícil, nos estamos divorciando y ella lo está resintiendo; acaba de mudarse con su madre y el cambio apenas los está superando; yo la veo muy poco, y ella me ama muchísimo, ¿se imagina usted ese cambio para ella? Por favor, entiéndala un poco, está pasando por procesos que son muy complicados para ella.</div>
+          </div>
         </div>
-        <div class="o-wrapper-container js-wrapper-container"><img src="img/ss-02.jpg"></div>
-        <div class="o-wrapper-container js-wrapper-container"><img src="img/ss-03.jpg"></div>
+        <div class="o-wrapper-container js-wrapper-container" data-hide-next><img class="u-pos animated fadeInRight" src="img/03-papa.jpg" style="left: 20px; top: 50px;">
+          <div class="u-evaluation animated slideInBottom">
+            <div class="u-title animated fadeIn">¿Qué piensan que debe hacer el profesor?</div>
+            <div class="u-note">Al terminar la reflexión pasar a la pregunta 2</div>
+            <div class="btn-next-inline"><img class="btn js-next-btn" src="img/btn_siguiente.png"></div>
+          </div>
+        </div>
+        <div class="o-wrapper-container js-wrapper-container" data-hide-next><img class="u-pos" src="img/03-papa.jpg" style="left: 20px; top: 50px;">
+          <div class="u-evaluation animated slideInBottom">
+            <div class="u-title animated fadeIn">Quienes piensan que el profesor debe darle otra oportunidad a la chica, ¿escucharon realmente algún argumento por parte del padre?</div>
+            <div class="u-note">Al terminar la reflexión pasar a la pregunta 3</div>
+            <div class="btn-next-inline"><img class="btn js-next-btn" src="img/btn_siguiente.png"></div>
+          </div>
+        </div>
+        <div class="o-wrapper-container js-wrapper-container"><img class="u-pos" src="img/03-papa.jpg" style="left: 20px; top: 50px;">
+          <div class="u-evaluation animated slideInBottom">
+            <div class="u-title animated fadeIn">Estamos ante una falacia de no pertinencia, ya que los sentimientos que se pretenden provocar en el interlocutor no son pertinentes para el debate, solo se pretende desconcentrarlo y alterarlo emocionalmente.</div>
+            <div class="u-remember tac">
+              <div class="btn btn-pulse" data-modal="#recuerda-3"><img src="img/btn_recuerda.png"></div>
+            </div>
+          </div>
+          <div class="modal" id="recuerda-3">
+            <p>Recuerda que esta es una falacia informal. Puede ser que esté argumentada de forma válida, pero no apela a los argumentos esgrimidos por el interlocutor, sino a causar temor, compasión, etc., con la finalidad de apelar a los sentimientos del otro, como fue el caso de este padre con el profesor.</p>
+            <div class="close">x</div>
+          </div>
+        </div><!-- ejercicio 4 -->
+        <div class="o-wrapper-container js-wrapper-container" style="display:block;"><img class="u-pos animated fadeInRight" src="img/04-madre.jpg" style="right: 20px; top: 50px;"></div>
+        <div class="o-wrapper-container js-wrapper-container"><img class="u-pos" src="img/04-madre.jpg" style="right: 20px; top: 50px;">
+          <div class="u-dialog u-pos u-dialog-right animated fadeInRight" style="right: 400px; top: 60px;">
+            <div class="text">sabe, en estos momentos me encuentro muy bien en mi trabajo, económicamente muy estable, no tendría ningún problema en desprenderme de cierta cantidad de dinero…</div>
+          </div>
+        </div>
+        <div class="o-wrapper-container js-wrapper-container" data-hide-next><img class="u-pos animated fadeInRight" src="img/04-madre.jpg" style="left: 20px; top: 50px;">
+          <div class="u-evaluation animated slideInBottom">
+            <div class="u-title animated fadeIn">¿Creen que el profesor reconsiderará hacer nuevamente el examen a su alumna?</div>
+            <div class="u-note">Al terminar la reflexión pasar a la pregunta 2</div>
+            <div class="btn-next-inline"><img class="btn js-next-btn" src="img/btn_siguiente.png"></div>
+          </div>
+        </div>
+        <div class="o-wrapper-container js-wrapper-container" data-hide-next><img class="u-pos" src="img/04-madre.jpg" style="left: 20px; top: 50px;">
+          <div class="u-evaluation animated slideInBottom">
+            <div class="u-title animated fadeIn">¿Qué puede entender el profesor sobre la declaración de la madre?</div>
+            <div class="u-note">Al terminar la reflexión pasar a la pregunta 3</div>
+            <div class="btn-next-inline"><img class="btn js-next-btn" src="img/btn_siguiente.png"></div>
+          </div>
+        </div>
+        <div class="o-wrapper-container js-wrapper-container" data-hide-next><img class="u-pos" src="img/04-madre.jpg" style="left: 20px; top: 50px;">
+          <div class="u-evaluation animated slideInBottom">
+            <div class="u-title animated fadeIn">¿Podemos decir que realmente el profesor está siendo sobornado?</div>
+            <div class="u-note">Al terminar la reflexión pasar a la pregunta 4</div>
+            <div class="btn-next-inline"><img class="btn js-next-btn" src="img/btn_siguiente.png"></div>
+          </div>
+        </div>
+        <div class="o-wrapper-container js-wrapper-container" data-hide-next><img class="u-pos" src="img/04-madre.jpg" style="left: 20px; top: 50px;">
+          <div class="u-evaluation animated slideInBottom">
+            <div class="u-title animated fadeIn">Si el profesor reconsidera hacer nuevamente el examen está cayendo en la falacia de ambigüedad</div>
+            <div class="u-note">Continua a la conclusión</div>
+            <div class="btn-next-inline"><img class="btn js-next-btn" src="img/btn_siguiente.png"></div>
+          </div>
+        </div>
+        <div class="o-wrapper-container js-wrapper-container"><img class="u-pos" src="img/04-madre.jpg" style="left: 20px; top: 50px;">
+          <div class="u-evaluation animated slideInBottom">
+            <div class="u-title animated fadeIn">Conclusión</div>
+            <div class="u-note">Si el profesor reconsidera hacer nuevamente el examen, está cayendo en la falacia; si no lo hace, podemos decir que tiene un poco de racionalidad en él, porque recordemos que ya cedió ante el padre de la chica. Pero, el punto de este asunto es el modo en que la madre le dijo al profesor “no tendría ningún problema en desprenderme de cierta cantidad de dinero”. Lo dijo de forma ambigua, sin comprometerse a realmente nada, es decir, no está explícitamente sobornando al profesor. Si su intención fuera realmente sobornar, diría: le doy dinero a cambio de que vuelva a aplicar el examen a mi hija. Pero no lo hizo así, esto es porque así funciona este tipo de falacia, expresar algo de manera ambigua para que nuestro interlocutor se confunda y crea algo que nos conviene, para después desprendernos de la responsabilidad apelando a que realmente uno nunca quiso decir lo que el otro entendió. En este caso, suponiendo que el profesor acepte hacer el examen de nuevo, y después exija a la madre de su alumna el dinero acordado, la madre puede negárselo, alegando que jamás quiso dar a entender que ella estaba ofreciéndole dinero a cambio de volver a aplicar el examen a su hija. Y así, la falacia por ambigüedad dio resultado.</div>
+            <div class="u-remember tac">
+              <div class="btn btn-pulse" data-modal="#recuerda-4"><img src="img/btn_recuerda.png"></div>
+            </div>
+          </div>
+          <div class="modal" id="recuerda-4">
+            <p>Recuerda que esta es una falacia informal, y utiliza las posibles acepciones que se pueden desprender de enunciar alguna idea de forma ambigua, es decir, de una forma no explícitamente clara. Esta madre, en este caso, pudo beneficiarse de su ambigüedad sin tener argumentos claros.</p>
+            <div class="close">x</div>
+          </div>
+        </div>
       </div>
       <div class="o-navbar-btn">
-        <button class="u-nav-btn js-prev-btn u-transition" title="Anterior">‹</button>
-        <button class="u-nav-btn js-next-btn u-transition" title="Siguiente">›</button>
+        <button class="u-nav-btn js-prev-btn u-transition" title="Anterior"><img src="img/btn_prev.png"></button>
+        <button class="u-nav-btn js-next-btn u-transition" title="Siguiente"><img src="img/btn_next.png"></button>
       </div>
     </section>
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>

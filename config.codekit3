@@ -9,6 +9,13 @@
 	],
 "creatorBuild": "26261",
 "files": {
+	"\/.gitattributes": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/.gitattributes",
+		"oF": 0
+		},
 	"\/css\/animate.css": {
 		"aP": 1,
 		"bl": 0,
@@ -164,6 +171,125 @@
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 1,
+		"q": 100
+		},
+	"\/img\/03-papa.jpg": {
+		"ft": 16384,
+		"iS": 110566,
+		"oA": 0,
+		"oAP": "\/img\/03-papa.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
+	"\/img\/04-madre.jpg": {
+		"ft": 16384,
+		"iS": 84024,
+		"oA": 0,
+		"oAP": "\/img\/04-madre.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
+	"\/img\/btn_comenzar.png": {
+		"ft": 32768,
+		"iS": 6612,
+		"oA": 0,
+		"oAP": "\/img\/btn_comenzar.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/btn_next.png": {
+		"ft": 32768,
+		"iS": 548,
+		"oA": 0,
+		"oAP": "\/img\/btn_next.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/btn_prev.png": {
+		"ft": 32768,
+		"iS": 556,
+		"oA": 0,
+		"oAP": "\/img\/btn_prev.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/btn_recuerda.png": {
+		"ft": 32768,
+		"iS": 1744,
+		"oA": 0,
+		"oAP": "\/img\/btn_recuerda.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/btn_siguiente.png": {
+		"ft": 32768,
+		"iS": 1805,
+		"oA": 0,
+		"oAP": "\/img\/btn_siguiente.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/comillas.png": {
+		"ft": 32768,
+		"iS": 5221,
+		"oA": 0,
+		"oAP": "\/img\/comillas.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/fondo-hoja.png": {
+		"ft": 32768,
+		"iS": 6428,
+		"oA": 0,
+		"oAP": "\/img\/fondo-hoja.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/fondo.png": {
+		"ft": 32768,
+		"iS": 283381,
+		"oA": 0,
+		"oAP": "\/img\/fondo.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/intro.png": {
+		"ft": 32768,
+		"iS": 304884,
+		"oA": 0,
+		"oAP": "\/img\/intro.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/img\/slide-1.jpg": {
